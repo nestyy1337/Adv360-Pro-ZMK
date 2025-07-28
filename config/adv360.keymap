@@ -165,6 +165,24 @@
 
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        minus_underscore: minus_underscore {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MINUS_UNDERSCORE";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS>, <&kp UNDERSCORE>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        percent_atsign: percent_atsign {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PERCENT_ATSIGN";
+            #binding-cells = <0>;
+            bindings = <&kp PERCENT>, <&kp AT>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -173,11 +191,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&pipe_tilde  &n1_exclamation  &n2_left_bracket  &n3_left_brace  &n4_left_parenthesis  &n5_ampersand  &tog 1                                                                    &mo 3      &n6_equal  &n7_right_parenthesis  &n8_right_brace  &n9_right_bracket  &n0_asterisk  &vpq_plus_caret
-&kp TAB      &kp Q            &kp W             &kp F           &kp P                 &kp B          &none                                                                     &none      &kp J      &kp L                  &kp U            &kp Y              &kp SEMI      &kp BSLH
-&kp ESC      &kp A            &kp R             &kp S           &kp T                 &kp G          &none     &kp LEFT_SHIFT  &kp LEFT_CONTROL      &kp LGUI       &kp RCTRL  &none      &kp M      &kp N                  &kp E            &kp I              &kp O         &kp SQT
-&kp LSHFT    &kp Z            &kp X             &kp C           &kp D                 &kp V                                    &kp LEFT_ALT          &kp RIGHT_ALT                        &kp K      &kp H                  &kp COMMA        &kp DOT            &kp FSLH      &kp RSHFT
-&mo 2        &kp GRAVE        &kp CAPS          &kp LEFT        &kp RIGHT                            &kp BSPC  &kp DEL         &kp END               &kp PG_DN      &kp ENTER  &kp SPACE             &kp UP                 &kp DOWN         &vpq_hash          &vpq_dollar   &mo 2
+&pipe_tilde        &n1_exclamation  &n2_left_bracket  &n3_left_brace  &n4_left_parenthesis  &n5_ampersand  &tog 1                                                                              &mo 3      &n6_equal  &n7_right_parenthesis  &n8_right_brace  &n9_right_bracket  &n0_asterisk  &vpq_plus_caret
+&kp TAB            &kp Q            &kp W             &kp F           &kp P                 &kp B          &none                                                                               &none      &kp J      &kp L                  &kp U            &kp Y              &kp SEMI      &kp BSLH
+&kp ESC            &kp A            &kp R             &kp S           &kp T                 &kp G          &none     &kp LEFT_SHIFT  &kp LEFT_CONTROL      &kp RIGHT_CONTROL  &kp RIGHT_SHIFT  &none      &kp M      &kp N                  &kp E            &kp I              &kp O         &kp SQT
+&minus_underscore  &kp Z            &kp X             &kp C           &kp D                 &kp V                                    &kp LEFT_ALT          &kp RIGHT_ALT                                  &kp K      &kp H                  &kp COMMA        &kp DOT            &kp FSLH      &percent_atsign
+&mo 2              &kp GRAVE        &kp CAPS          &kp LEFT        &kp RIGHT                            &kp BSPC  &kp DEL         &kp LEFT_GUI          &kp PG_DN          &kp ENTER        &kp SPACE             &kp UP                 &kp DOWN         &vpq_hash          &vpq_dollar   &mo 2
             >;
         };
 
