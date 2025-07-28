@@ -8,7 +8,7 @@
 / {
     behaviors {
         #include "macros.dtsi"
-      #include "version.dtsi"
+        #include "version.dtsi"
 
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
@@ -20,6 +20,7 @@
             bindings = <&kp>, <&kp>;
         };
 
+        // Mod‑Morph macros from Glove80
         n1_exclamation: n1_exclamation {
             compatible = "zmk,behavior-mod-morph";
             label = "n1_exclamation";
@@ -27,7 +28,6 @@
             bindings = <&kp N1>, <&kp EXCLAMATION>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-
         n2_left_bracket: n2_left_bracket {
             compatible = "zmk,behavior-mod-morph";
             label = "n2_left_bracket";
@@ -35,7 +35,6 @@
             bindings = <&kp N2>, <&kp LEFT_BRACKET>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-
         n3_left_brace: n3_left_brace {
             compatible = "zmk,behavior-mod-morph";
             label = "n3_left_brace";
@@ -43,7 +42,6 @@
             bindings = <&kp N3>, <&kp LEFT_BRACE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-
         n4_left_parenthesis: n4_left_parenthesis {
             compatible = "zmk,behavior-mod-morph";
             label = "n4_left_parenthesis";
@@ -51,7 +49,6 @@
             bindings = <&kp N4>, <&kp LEFT_PARENTHESIS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-
         n5_ampersand: n5_ampersand {
             compatible = "zmk,behavior-mod-morph";
             label = "n5_ampersand";
@@ -59,7 +56,6 @@
             bindings = <&kp N5>, <&kp AMPERSAND>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-
         n6_equal: n6_equal {
             compatible = "zmk,behavior-mod-morph";
             label = "n6_equal";
@@ -67,7 +63,6 @@
             bindings = <&kp N6>, <&kp EQUAL>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-
         n7_right_parenthesis: n7_right_parenthesis {
             compatible = "zmk,behavior-mod-morph";
             label = "n7_right_parenthesis";
@@ -75,7 +70,6 @@
             bindings = <&kp N7>, <&kp RIGHT_PARENTHESIS>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-
         n8_right_brace: n8_right_brace {
             compatible = "zmk,behavior-mod-morph";
             label = "n8_right_brace";
@@ -83,7 +77,6 @@
             bindings = <&kp N8>, <&kp RIGHT_BRACE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-
         n9_right_bracket: n9_right_bracket {
             compatible = "zmk,behavior-mod-morph";
             label = "n9_right_bracket";
@@ -91,7 +84,6 @@
             bindings = <&kp N9>, <&kp RIGHT_BRACKET>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-
         n0_asterisk: n0_asterisk {
             compatible = "zmk,behavior-mod-morph";
             label = "n0_asterisk";
@@ -107,7 +99,6 @@
             bindings = <&kp PLUS>, <&kp CARET>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-
         vpq_at_sign: vpq_at_sign {
             compatible = "zmk,behavior-mod-morph";
             label = "vpq_at_sign";
@@ -115,7 +106,6 @@
             bindings = <&kp AT_SIGN>, <&kp AT_SIGN>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-
         vpq_percent: vpq_percent {
             compatible = "zmk,behavior-mod-morph";
             label = "vpq_percent";
@@ -123,7 +113,6 @@
             bindings = <&kp PERCENT>, <&kp PERCENT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-
         vpq_hash: vpq_hash {
             compatible = "zmk,behavior-mod-morph";
             label = "vpq_hash";
@@ -131,7 +120,6 @@
             bindings = <&kp HASH>, <&kp HASH>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-
         vpq_dollar: vpq_dollar {
             compatible = "zmk,behavior-mod-morph";
             label = "vpq_dollar";
@@ -147,65 +135,61 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp PIPE        &kp EXCLAMATION  &kp LEFT_BRACKET  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp AMPERSAND  &tog 1                                                               &mo 3      &kp EQUAL  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp ASTERISK  &kp MINUS
-&kp LEFT_SHIFT  &kp Q            &kp W             &kp F           &kp R                 &kp B          &none                                                                &none      &kp Y      &kp U                  &kp I            &kp O              &kp P         &kp BSLH
-&kp ESC         &kp A            &kp S             &kp S           &kp F                 &kp G          &none     &kp LCTRL  &kp LEFT_SHIFT      &kp RIGHT_SHIFT  &kp RCTRL  &none      &kp H      &kp J                  &kp K            &kp L              &kp SEMI      &kp SQT
-&kp TAB         &kp Z            &kp X             &kp C           &kp V                 &kp V                               &kp HOME            &kp LEFT_GUI                           &kp N      &kp M                  &kp COMMA        &kp DOT            &kp FSLH      &kp RSHFT
-&mo 2           &kp GRAVE        &kp CAPS          &kp LEFT        &kp RIGHT                            &kp BSPC  &kp DEL    &kp LEFT_ALT        &kp RIGHT_ALT    &kp ENTER  &kp SPACE             &kp UP                 &kp DOWN         &kp HASH           &kp DOLLAR    &mo 2
+                &kp PIPE         &n1_exclamation  &n2_left_bracket &n3_left_brace &n4_left_parenthesis &n5_ampersand
+                &tog 1           &mo 3             &n6_equal       &n7_right_parenthesis &n8_right_brace      &n9_right_bracket
+                &n0_asterisk     &vpq_plus_caret   &kp TAB         &kp Q               &kp W                &kp F
+                &kp R            &kp B             &none           &none               &kp Y                &kp U
+                &kp I            &kp O             &kp P           &kp BSLH             &kp ESC             &kp A
+                &kp S            &kp S             &kp F            &kp G                &kp none           &kp LCTRL
+                &kp LEFT_SHIFT   &kp RIGHT_SHIFT  &kp RCTRL        &none               &kp H                &kp J
+                &kp K            &kp L             &kp SEMI        &kp SQT              &kp TAB             &kp Z
+                &kp X            &kp C            &kp V            &kp V                 &kp HOME           &kp LEFT_GUI
+                &kp N           &kp M             &kp COMMA      &kp DOT             &kp FSLH             &kp RSHFT
+                &mo 2           &kp GRAVE         &kp CAPS       &kp LEFT            &kp RIGHT           &kp BSPC
+                &kp DEL         &kp LEFT_ALT      &kp RIGHT_ALT  &kp ENTER           &kp SPACE           &kp UP
+                &kp DOWN        &vpq_hash         &vpq_dollar
             >;
         };
 
         keypad {
             display-name = "Kp";
             bindings = <
-&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &trans                                                   &mo 3      &kp N6  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
-&kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T   &none                                                    &none      &kp Y   &kp KP_N7   &kp KP_N8     &kp KP_N9      &kp KP_MINUS     &kp BSLH
-&kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G   &none     &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H   &kp KP_N4   &kp KP_N5     &kp KP_N6      &kp KP_PLUS      &kp SQT
-&kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                        &kp HOME      &kp PG_UP                        &kp N   &kp KP_N1   &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &kp RSHFT
-&mo 2      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp KP_N0          &kp UP      &kp DOWN      &kp KP_DOT     &kp RBKT         &mo 2
+                &kp EQUAL       &n1_exclamation   &n2_left_bracket   &n3_left_brace   &n4_left_parenthesis &n5_ampersand
+                &trans          &mo 3              &n6_equal         &kp KP_NUM       &kp KP_EQUAL         &kp KP_DIVIDE
+                &kp KP_MULTIPLY &kp MINUS         &kp TAB           &kp Q            &kp W                &kp E
+                &kp R           &kp T              &none             &none            &kp Y                &kp KP_N7
+                &kp KP_N8       &kp KP_N9          &kp KP_MINUS      &kp BSLH         &kp ESC             &kp A
+                &kp S           &kp D              &kp F             &kp G            &none               &kp LCTRL
+                &kp LALT        &kp LGUI           &kp RCTRL         &none            &kp H                &kp KP_N4
+                &kp KP_N5       &kp KP_N6          &kp KP_PLUS       &kp SQT
             >;
         };
 
         fn {
             display-name = "Fn";
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &tog 1                                      &mo 3   &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-&trans  &trans  &trans  &trans  &trans  &trans  &none                                       &none   &trans  &trans  &trans  &trans   &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &none   &trans  &trans      &trans  &trans  &none   &trans  &trans  &trans  &trans   &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans  &trans  &trans  &trans   &trans   &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans          &trans  &trans  &trans   &trans   &trans
+                &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &tog 1  &mo 3 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
+                &trans  &trans  &trans  &trans  &trans  &trans  &none   &none  &trans &trans &trans &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &none   &trans &trans  &trans &trans &none   &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans                   &trans   &trans                 &trans  &trans
+                &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         mod {
             display-name = "Mod";
             bindings = <
-&none           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none                                                  &trans           &none  &none       &none       &none  &none  &none
-&none           &none         &none         &none         &none         &none         &bootloader                                            &bootloader      &none  &none       &none       &none  &none  &none
-&studio_unlock  &none         &none         &none         &none         &none         &none        &none  &none      &bt BT_CLR  &none       &stp STP_BAT     &none  &none       &none       &none  &none  &none
-&none           &none         &none         &none         &macro_ver    &none                             &none      &none                                    &none  &none       &none       &none  &none  &none
-&none           &none         &none         &none         &none                       &none        &none  &none      &none       &bl BL_TOG  &rgb_ug RGB_TOG         &bl BL_INC  &bl BL_DEC  &none  &none  &none
+                &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none &trans &none &none &none &none &none &none
+                &none &none &none &none &none &none &bootloader &bootloader &none &none &none &none &none &none
+                &studio_unlock &none &none &none &none &none &none &none &none &bt BT_CLR &none &stp STP_BAT &none &none &none &none &none &none
+                &none &none &none &none &macro_ver &none &none &none &none &none &none &none &none &none
+                &none &none &none &none &none &none &none &none &none &bl BL_TOG &rgb_ug RGB_TOG &bl BL_INC &bl BL_DEC &none &none &none
             >;
         };
 
-        extra1 {
-            display-name = "Red";
-            status = "reserved";
-        };
-
-        extra2 {
-            display-name = "Purple";
-            status = "reserved";
-        };
-
-        extra3 {
-            display-name = "Cyan";
-            status = "reserved";
-        };
-
-        extra4 {
-            display-name = "Yellow";
-            status = "reserved";
-        };
+        extra1 { display-name = "Red";    status = "reserved"; }
+        extra2 { display-name = "Purple"; status = "reserved"; }
+        extra3 { display-name = "Cyan";   status = "reserved"; }
+        extra4 { display-name = "Yellow"; status = "reserved"; }
     };
 };
