@@ -127,6 +127,14 @@
             bindings = <&kp DOLLAR>, <&kp DOLLAR>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        pipe_tilde: pipe_tilde {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PIPE_TILDE";
+            #binding-cells = <0>;
+            bindings = <&kp PIPE>, <&kp TILDE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -135,44 +143,33 @@
         default_layer {
             display-name = "Base";
             bindings = <
-                &kp PIPE         &n1_exclamation  &n2_left_bracket &n3_left_brace &n4_left_parenthesis &n5_ampersand
-                &tog 1           &mo 3             &n6_equal       &n7_right_parenthesis &n8_right_brace      &n9_right_bracket
-                &n0_asterisk     &vpq_plus_caret   &kp TAB         &kp Q               &kp W                &kp F
-                &kp R            &kp B             &none           &none               &kp Y                &kp U
-                &kp I            &kp O             &kp P           &kp BSLH             &kp ESC             &kp A
-                &kp S            &kp S             &kp F            &kp G                &kp none           &kp LCTRL
-                &kp LEFT_SHIFT   &kp RIGHT_SHIFT  &kp RCTRL        &none               &kp H                &kp J
-                &kp K            &kp L             &kp SEMI        &kp SQT              &kp TAB             &kp Z
-                &kp X            &kp C            &kp V            &kp V                 &kp HOME           &kp LEFT_GUI
-                &kp N           &kp M             &kp COMMA      &kp DOT             &kp FSLH             &kp RSHFT
-                &mo 2           &kp GRAVE         &kp CAPS       &kp LEFT            &kp RIGHT           &kp BSPC
-                &kp DEL         &kp LEFT_ALT      &kp RIGHT_ALT  &kp ENTER           &kp SPACE           &kp UP
-                &kp DOWN        &vpq_hash         &vpq_dollar
+                &pipe_tilde   &n1_exclamation  &n2_left_bracket  &n3_left_brace  &n4_left_parenthesis  &n5_ampersand  &tog 1  &mo 3  &n6_equal  &n7_right_parenthesis  &n8_right_brace  &n9_right_bracket  &n0_asterisk  &vpq_plus_caret  &vpq_hash  &vpq_dollar  &mo 1
+                &kp TAB       &kp Q             &kp W             &kp E             &kp R               &kp T         &none   &none   &kp Y        &kp U                &kp I             &kp O            &kp P         &kp BSLH      &kp ESC    &kp A      &kp S     &kp D
+                &kp F         &kp G             &none            &kp LCTRL         &kp LALT            &kp LGUI      &kp RCTRL &none  &kp H        &kp J                &kp K             &kp L            &kp SEMI     &kp SQT      &kp LSHFT &kp Z      &kp X     &kp C
+                &kp V         &kp B             &kp HOME         &kp PG_UP         &kp N               &kp M         &kp COMMA &kp DOT &kp FSLH     &kp RSHFT            &mo 2             &kp GRAVE        &kp CAPS     &kp LEFT   &kp RIGHT &kp BSPC  &kp DEL   &kp END
+                &kp PG_DN     &kp ENTER        &kp SPACE        &kp UP            &kp DOWN            &kp LBKT      &kp RBKT &mo 2 &kp LEFT_ALT &kp RIGHT_ALT        &kp STP_BAT        &kp BT_SEL 0      &kp BT_SEL 1 &kp BT_SEL 2 &kp BT_SEL 3 &kp BT_SEL 4 &kp BL_TOG &kp RGB_TOG
             >;
         };
 
         keypad {
             display-name = "Kp";
             bindings = <
-                &kp EQUAL       &n1_exclamation   &n2_left_bracket   &n3_left_brace   &n4_left_parenthesis &n5_ampersand
-                &trans          &mo 3              &n6_equal         &kp KP_NUM       &kp KP_EQUAL         &kp KP_DIVIDE
-                &kp KP_MULTIPLY &kp MINUS         &kp TAB           &kp Q            &kp W                &kp E
-                &kp R           &kp T              &none             &none            &kp Y                &kp KP_N7
-                &kp KP_N8       &kp KP_N9          &kp KP_MINUS      &kp BSLH         &kp ESC             &kp A
-                &kp S           &kp D              &kp F             &kp G            &none               &kp LCTRL
-                &kp LALT        &kp LGUI           &kp RCTRL         &none            &kp H                &kp KP_N4
-                &kp KP_N5       &kp KP_N6          &kp KP_PLUS       &kp SQT
+                &pipe_tilde   &n1_exclamation  &n2_left_bracket  &n3_left_brace  &n4_left_parenthesis  &n5_ampersand  &trans  &mo 3  &n6_equal  &kp KP_NUM    &kp KP_EQUAL     &kp KP_DIVIDE    &kp KP_MULTIPLY  &kp MINUS  &kp TAB    &kp Q    &kp W    &kp E
+                &kp R         &kp T            &none             &none           &kp Y               &kp KP_N7      &kp KP_N8 &kp KP_N9 &kp KP_MINUS  &kp BSLH        &kp ESC          &kp A           &kp S      &kp D     &kp F     &kp G      &none     &kp LCTRL
+                &kp LALT      &kp LGUI         &kp RCTRL         &none           &kp H               &kp KP_N4      &kp KP_N5 &kp KP_N6 &kp KP_PLUS    &kp SQT        &kp LSHFT        &kp Z           &kp X      &kp C     &kp V     &kp B      &kp HOME  &kp PG_UP
+                &kp N         &kp KP_N1        &kp KP_N2         &kp KP_N3       &kp KP_ENTER        &kp RSHFT      &mo 2     &kp GRAVE &kp CAPS      &kp LEFT         &kp RIGHT        &kp BSPC        &kp DEL    &kp END   &kp PG_DN &kp ENTER  &kp KP_N0 &kp UP
+                &kp DOWN      &kp KP_DOT       &kp RBKT         &mo 2
             >;
         };
 
         fn {
             display-name = "Fn";
             bindings = <
-                &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &tog 1  &mo 3 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
-                &trans  &trans  &trans  &trans  &trans  &trans  &none   &none  &trans &trans &trans &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans  &trans  &none   &trans &trans  &trans &trans &none   &trans  &trans
-                &trans  &trans  &trans  &trans  &trans  &trans                   &trans   &trans                 &trans  &trans
-                &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
+                &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &tog 1 &mo 3 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
+                &trans &trans &trans &trans &trans &trans &none &none &trans &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans &trans &none &trans &trans &trans &trans &none &trans &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+                &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
             >;
         };
 
