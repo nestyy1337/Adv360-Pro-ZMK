@@ -19,6 +19,126 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
+        n1_exclamation: n1_exclamation {
+            compatible = "zmk,behavior-mod-morph";
+            label = "n1_exclamation";
+            #binding-cells = <0>;
+            bindings = <&kp N1>, <&kp EXCLAMATION>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        n2_left_bracket: n2_left_bracket {
+            compatible = "zmk,behavior-mod-morph";
+            label = "n2_left_bracket";
+            #binding-cells = <0>;
+            bindings = <&kp N2>, <&kp LEFT_BRACKET>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        n3_left_brace: n3_left_brace {
+            compatible = "zmk,behavior-mod-morph";
+            label = "n3_left_brace";
+            #binding-cells = <0>;
+            bindings = <&kp N3>, <&kp LEFT_BRACE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        n4_left_parenthesis: n4_left_parenthesis {
+            compatible = "zmk,behavior-mod-morph";
+            label = "n4_left_parenthesis";
+            #binding-cells = <0>;
+            bindings = <&kp N4>, <&kp LEFT_PARENTHESIS>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        n5_ampersand: n5_ampersand {
+            compatible = "zmk,behavior-mod-morph";
+            label = "n5_ampersand";
+            #binding-cells = <0>;
+            bindings = <&kp N5>, <&kp AMPERSAND>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        n6_equal: n6_equal {
+            compatible = "zmk,behavior-mod-morph";
+            label = "n6_equal";
+            #binding-cells = <0>;
+            bindings = <&kp N6>, <&kp EQUAL>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        n7_right_parenthesis: n7_right_parenthesis {
+            compatible = "zmk,behavior-mod-morph";
+            label = "n7_right_parenthesis";
+            #binding-cells = <0>;
+            bindings = <&kp N7>, <&kp RIGHT_PARENTHESIS>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        n8_right_brace: n8_right_brace {
+            compatible = "zmk,behavior-mod-morph";
+            label = "n8_right_brace";
+            #binding-cells = <0>;
+            bindings = <&kp N8>, <&kp RIGHT_BRACE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        n9_right_bracket: n9_right_bracket {
+            compatible = "zmk,behavior-mod-morph";
+            label = "n9_right_bracket";
+            #binding-cells = <0>;
+            bindings = <&kp N9>, <&kp RIGHT_BRACKET>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        n0_asterisk: n0_asterisk {
+            compatible = "zmk,behavior-mod-morph";
+            label = "n0_asterisk";
+            #binding-cells = <0>;
+            bindings = <&kp N0>, <&kp ASTERISK>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        vpq_plus_caret: vpq_plus_caret {
+            compatible = "zmk,behavior-mod-morph";
+            label = "vpq_plus_caret";
+            #binding-cells = <0>;
+            bindings = <&kp PLUS>, <&kp CARET>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        vpq_at_sign: vpq_at_sign {
+            compatible = "zmk,behavior-mod-morph";
+            label = "vpq_at_sign";
+            #binding-cells = <0>;
+            bindings = <&kp AT_SIGN>, <&kp AT_SIGN>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        vpq_percent: vpq_percent {
+            compatible = "zmk,behavior-mod-morph";
+            label = "vpq_percent";
+            #binding-cells = <0>;
+            bindings = <&kp PERCENT>, <&kp PERCENT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        vpq_hash: vpq_hash {
+            compatible = "zmk,behavior-mod-morph";
+            label = "vpq_hash";
+            #binding-cells = <0>;
+            bindings = <&kp HASH>, <&kp HASH>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        vpq_dollar: vpq_dollar {
+            compatible = "zmk,behavior-mod-morph";
+            label = "vpq_dollar";
+            #binding-cells = <0>;
+            bindings = <&kp DOLLAR>, <&kp DOLLAR>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
