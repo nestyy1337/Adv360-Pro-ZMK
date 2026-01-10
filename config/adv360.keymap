@@ -195,7 +195,7 @@
 &kp TAB            &kp Q            &kp W             &kp F           &kp P                 &kp B          &none                                                                               &none      &kp J      &kp L                  &kp U            &kp Y              &kp SEMI      &kp BSLH
 &kp ESC            &kp A            &kp R             &kp S           &kp T                 &kp G          &none     &kp LEFT_SHIFT  &kp LEFT_CONTROL      &kp RIGHT_CONTROL  &kp RIGHT_SHIFT  &none      &kp M      &kp N                  &kp E            &kp I              &kp O         &kp SQT
 &minus_underscore  &kp Z            &kp X             &kp C           &kp D                 &kp V                                    &kp LEFT_ALT          &kp RIGHT_ALT                                  &kp K      &kp H                  &kp COMMA        &kp DOT            &kp FSLH      &percent_atsign
-&mo 2              &kp GRAVE        &kp CAPS          &kp LEFT        &kp RIGHT                            &kp BSPC  &kp DEL         &kp LEFT_GUI          &kp PG_DN          &kp ENTER        &kp SPACE             &kp UP                 &kp DOWN         &vpq_hash          &vpq_dollar   &mo 2
+&mo 2              &kp GRAVE        &kp CAPS          &kp LEFT        &kp RIGHT                            &kp BSPC  &kp DEL         &kp LEFT_META         &kp RIGHT_META     &kp ENTER        &kp SPACE             &kp UP                 &kp DOWN         &vpq_hash          &vpq_dollar   &mo 2
             >;
         };
 
